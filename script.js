@@ -165,11 +165,11 @@ function drawVideoFrame(ctx, intensity) {
 
   // Increased intensity multiplier and alpha for video
   for (let i = 0; i < data.length; i += 4) {
-    const noise = Math.random() * 255 * intensity * 2.5; // Increased from 1.5 to 2.5
+    const noise = Math.random() * 255 * intensity * 2; // Increased from 1.5 to 2
     data[i] = noise;
     data[i + 1] = noise;
     data[i + 2] = noise;
-    data[i + 3] = 70; // Increased from 35 to 70
+    data[i + 3] = 60; // Increased from 35 to 60
   }
 
   // Apply grain with same opacity as preview
@@ -180,8 +180,7 @@ function drawVideoFrame(ctx, intensity) {
 
   tempCtx.putImageData(imageData, 0, 0);
 
-  // Use same global alpha as in the preview rendering
-  ctx.globalAlpha = 0.45; // Increased from 0.3 to 0.45
+  ctx.globalAlpha = 0.4; // Increased from 0.3 to 0.4
   ctx.drawImage(tempCanvas, 0, 0);
   ctx.globalAlpha = 1.0;
 }
