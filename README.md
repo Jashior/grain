@@ -1,5 +1,7 @@
 # Film Grain Effect Generator
 
+[View Demo](https://jashior.github.io/grain/)
+
 A web-based tool that allows users to add animated film grain effects to their images. Perfect for creating vintage or artistic photo effects right in your browser.
 
 ## Features
